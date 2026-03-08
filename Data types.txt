@@ -1,0 +1,375 @@
+JAVA DATA TYPES – COMPLETE NOTES
+
+WHAT ARE DATA TYPES IN JAVA?
+
+A data type defines:
+
+what type of value a variable can store
+
+how much memory is allocated
+
+what operations can be performed
+
+Example:
+
+int age = 21;
+double price = 45.5;
+char grade = 'A';
+
+TYPES OF DATA TYPES
+
+Java has two categories of data types.
+
+Primitive Data Types
+
+Non-Primitive (Reference) Data Types
+
+PRIMITIVE DATA TYPES
+
+Primitive data types store actual values.
+
+Java has 8 primitive data types.
+
+byte
+Size: 1 byte
+Range: -128 to 127
+
+short
+Size: 2 bytes
+Range: -32768 to 32767
+
+int
+Size: 4 bytes
+Range: -2147483648 to 2147483647
+
+long
+Size: 8 bytes
+
+float
+Size: 4 bytes
+
+double
+Size: 8 bytes
+
+char
+Size: 2 bytes
+
+boolean
+Value: true or false
+
+Example:
+
+int a = 10;
+float b = 5.5f;
+char c = 'A';
+boolean d = true;
+
+NON-PRIMITIVE DATA TYPES
+
+These store reference (memory address).
+
+Examples:
+
+String
+Array
+Class
+Object
+Interface
+
+Example:
+
+String name = "Soujanya";
+
+DIFFERENCE BETWEEN PRIMITIVE AND NON-PRIMITIVE
+
+Primitive Data Types
+
+store actual value
+
+fixed memory size
+
+faster
+
+Non-Primitive Data Types
+
+store reference address
+
+size varies
+
+slightly slower
+
+DEFAULT VALUES
+
+byte = 0
+short = 0
+int = 0
+long = 0L
+float = 0.0f
+double = 0.0
+char = '\u0000'
+boolean = false
+
+TYPE CASTING
+
+Type casting means converting one data type to another.
+
+Two types:
+
+Widening Casting
+
+Narrowing Casting
+
+WIDENING CASTING
+
+Small data type → Large data type.
+
+Example:
+
+int a = 10;
+double b = a;
+
+Conversion order:
+
+byte → short → int → long → float → double
+
+NARROWING CASTING
+
+Large data type → Small data type.
+
+Example:
+
+double a = 10.5;
+int b = (int)a;
+
+Output
+
+10
+
+WRAPPER CLASSES
+
+Each primitive type has a wrapper class.
+
+byte → Byte
+short → Short
+int → Integer
+long → Long
+float → Float
+double → Double
+char → Character
+boolean → Boolean
+
+Example:
+
+Integer num = 10;
+
+AUTOBOXING
+
+Primitive → Wrapper
+
+Example:
+
+int a = 10;
+Integer b = a;
+
+UNBOXING
+
+Wrapper → Primitive
+
+Example:
+
+Integer a = 20;
+int b = a;
+
+INTERVIEW QUESTIONS
+
+What are data types in Java?
+
+Data types define what type of value a variable can store.
+
+How many primitive data types are there?
+
+There are 8 primitive data types.
+
+byte
+short
+int
+long
+float
+double
+char
+boolean
+
+Difference between float and double?
+
+float
+
+4 bytes
+
+less precision
+
+requires f suffix
+
+double
+
+8 bytes
+
+higher precision
+
+default decimal type
+
+What is the range of int?
+
+-2147483648 to 2147483647
+
+Why do we write f in float?
+
+Because decimal numbers are double by default.
+
+Example
+
+float a = 5.5f;
+
+What happens here?
+
+float f = 10.5;
+
+Compilation error.
+
+Correct
+
+float f = 10.5f;
+
+What happens here?
+
+byte a = 130;
+
+Compilation error.
+
+Range of byte is -128 to 127.
+
+Can we convert int to double automatically?
+
+Yes.
+
+int a = 10;
+double b = a;
+
+Can we convert double to int automatically?
+
+No.
+
+Casting required.
+
+double a = 10.5;
+int b = (int)a;
+
+CODING QUESTIONS
+
+Program 1: Print range of int
+
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Minimum value: " + Integer.MIN_VALUE);
+        System.out.println("Maximum value: " + Integer.MAX_VALUE);
+
+    }
+}
+
+Program 2: Convert int to double
+
+public class Main {
+    public static void main(String[] args) {
+
+        int a = 10;
+        double b = a;
+
+        System.out.println(b);
+
+    }
+}
+
+Program 3: Check digit or letter
+
+public class Main {
+    public static void main(String[] args) {
+
+        char ch = 'A';
+
+        if(Character.isDigit(ch))
+            System.out.println("Digit");
+        else if(Character.isLetter(ch))
+            System.out.println("Letter");
+
+    }
+}
+
+Program 4: Print ASCII value
+
+public class Main {
+    public static void main(String[] args) {
+
+        char ch = 'A';
+
+        int ascii = ch;
+
+        System.out.println(ascii);
+
+    }
+}
+
+Program 5: Swap two numbers
+
+int a = 5;
+int b = 10;
+
+int temp = a;
+a = b;
+b = temp;
+
+System.out.println(a + " " + b);
+
+Program 6: Swap without third variable
+
+int a = 5;
+int b = 10;
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+TRICKY INTERVIEW QUESTIONS
+
+Example 1
+
+System.out.println(10/3);
+
+Output
+
+3
+
+Example 2
+
+System.out.println(10/3.0);
+
+Output
+
+3.3333
+
+Example 3
+
+char ch = 65;
+System.out.println(ch);
+
+Output
+
+A
+
+Example 4
+
+int a = 'A';
+System.out.println(a);
+
+Output
+
+65
