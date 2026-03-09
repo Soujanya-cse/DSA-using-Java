@@ -1,0 +1,366 @@
+JAVA OPERATORS NOTES
+
+INTRODUCTION
+
+Operators in Java are symbols used to perform operations on variables and values.
+
+Example:
+
+int a = 10;
+int b = 5;
+int c = a + b;
+
+Here
+
+is the operator
+a and b are operands
+
+Result = 15
+
+So,
+
+Operator → Performs operation
+Operand → Value on which operation is performed
+
+Java has different types of operators.
+
+TYPES OF OPERATORS IN JAVA
+
+Arithmetic Operators
+
+Unary Operators
+
+Relational Operators
+
+Logical Operators
+
+Assignment Operators
+
+Ternary Operator
+
+Bitwise Operators
+
+Shift Operators
+
+ARITHMETIC OPERATORS
+
+Used for mathematical calculations.
+
+Operators:
+
+Addition
+
+Subtraction
+
+Multiplication
+/ Division
+% Modulus (remainder)
+
+Example:
+
+int a = 10;
+int b = 3;
+
+System.out.println(a + b);
+System.out.println(a - b);
+System.out.println(a * b);
+System.out.println(a / b);
+System.out.println(a % b);
+
+UNARY OPERATORS
+
+Unary operators work with only one operand.
+
+Operators:
+
+++ Increment
+-- Decrement
+! Logical NOT
+
+Example:
+
+int a = 5;
+a++;
+System.out.println(a);
+
+PRE INCREMENT
+
+First increment then use.
+
+Example:
+
+int a = 5;
+System.out.println(++a);
+
+Output: 6
+
+POST INCREMENT
+
+First use then increment.
+
+Example:
+
+int a = 5;
+System.out.println(a++);
+
+Output: 5
+
+After execution a becomes 6.
+
+RELATIONAL OPERATORS
+
+Used to compare two values.
+The result is always true or false.
+
+Operators:
+
+Greater than
+< Less than
+= Greater than or equal
+<= Less than or equal
+== Equal to
+!= Not equal to
+
+Example:
+
+int a = 10;
+int b = 20;
+
+System.out.println(a > b);
+System.out.println(a < b);
+System.out.println(a == b);
+
+LOGICAL OPERATORS
+
+Used to combine multiple conditions.
+
+Operators:
+
+&& Logical AND
+|| Logical OR
+! Logical NOT
+
+Example:
+
+int age = 20;
+
+if(age > 18 && age < 30)
+{
+System.out.println("Eligible");
+}
+
+ASSIGNMENT OPERATORS
+
+Used to assign values to variables.
+
+Operators:
+
+= Assign value
++= Add and assign
+-= Subtract and assign
+*= Multiply and assign
+/= Divide and assign
+%= Modulus and assign
+
+Example:
+
+int a = 10;
+
+a += 5;
+
+System.out.println(a);
+
+Output: 15
+
+TERNARY OPERATOR
+
+Short form of if-else.
+
+Syntax:
+
+condition ? value1 : value2
+
+Example:
+
+int a = 10;
+int b = 20;
+
+int max = (a > b) ? a : b;
+
+System.out.println(max);
+
+OPERATOR PRECEDENCE
+
+Java follows a priority order while solving expressions.
+
+Highest to Lowest Priority:
+
+++ -- !
+
+/ %
+
+< > <= >=
+
+== !=
+
+&&
+
+||
+
+=
+
+Example:
+
+int result = 10 + 5 * 2;
+
+Multiplication happens first.
+
+result = 10 + 10 = 20
+
+IMPORTANT INTERVIEW QUESTIONS
+
+What is an operator in Java?
+
+An operator is a symbol used to perform operations on variables and values.
+
+Example:
+
+/ %
+
+Difference between = and ==
+
+= Assignment operator
+== Comparison operator
+
+Example:
+
+int a = 10;
+
+if(a == 10)
+
+Difference between && and &
+
+&& Logical AND (short circuit)
+& Bitwise AND
+
+What is short circuit evaluation?
+
+In logical AND (&&), if the first condition is false, the second condition will not be checked.
+
+Example:
+
+if(a > 5 && b < 10)
+
+Difference between ++a and a++
+
+++a Pre increment (increment first)
+
+a++ Post increment (use first then increment)
+
+Example:
+
+int a = 5;
+
+System.out.println(++a);
+System.out.println(a++);
+System.out.println(a);
+
+CODING QUESTIONS
+
+Program 1: Arithmetic operations
+
+class ArithmeticDemo
+{
+public static void main(String[] args)
+{
+int a = 10;
+int b = 5;
+
+    System.out.println("Addition: " + (a+b));
+    System.out.println("Subtraction: " + (a-b));
+    System.out.println("Multiplication: " + (a*b));
+    System.out.println("Division: " + (a/b));
+    System.out.println("Modulus: " + (a%b));
+}
+
+}
+
+Program 2: Greatest of two numbers using ternary operator
+
+class Greatest
+{
+public static void main(String[] args)
+{
+int a = 10;
+int b = 20;
+
+    int max = (a>b) ? a : b;
+
+    System.out.println("Greatest number: " + max);
+}
+
+}
+
+Program 3: Check positive or negative number
+
+class PositiveNegative
+{
+public static void main(String[] args)
+{
+int num = -5;
+
+    String result = (num>=0) ? "Positive" : "Negative";
+
+    System.out.println(result);
+}
+
+}
+
+Program 4: Check even or odd
+
+class EvenOdd
+{
+public static void main(String[] args)
+{
+int num = 8;
+
+    if(num % 2 == 0)
+    {
+        System.out.println("Even");
+    }
+    else
+    {
+        System.out.println("Odd");
+    }
+}
+
+}
+
+TRICKY INTERVIEW QUESTION
+
+Find the output.
+
+int a = 10;
+
+System.out.println(a++ + ++a);
+
+Step:
+
+a++ → 10
+++a → 12
+
+Output = 22
+
+Final value of a = 12
+
+PRACTICE QUESTIONS
+
+Write a program to find the greatest of two numbers.
+
+Write a program to find the greatest of three numbers.
+
+Write a program to swap two numbers without using third variable.
+
+Write a program to check even or odd.
+
+Write a program to check whether a number is divisible by 5 and 11.
