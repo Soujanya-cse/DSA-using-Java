@@ -1,0 +1,12 @@
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int max=0;
+        int submax=nums[0];
+        for(int i:nums){
+            max=Math.max(max+i,i);
+            submax=Math.max(max,submax);
+        }
+
+        return submax;
+    }
+}
